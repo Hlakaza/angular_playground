@@ -1,0 +1,108 @@
+.panel-slide-overflow-container {
+    &.open {
+      height: auto;
+    }
+  }
+  .colour-picker {
+    button {
+      width: 49px;
+      height: 45px;
+      cursor: pointer;
+      margin: 0 8px 8px 0;
+      float: left;   
+      border: 6px solid #353535;
+      &.green {
+        background: rgb(67, 149, 57);
+      }
+      &.light-green {
+        background: rgb(172, 197, 64);
+      }
+      &.pink {
+        background: rgb(179, 17, 77);
+      }
+      &.gold {
+        background: rgb(255, 196, 33);
+      }
+    }
+  }
+  .panel-slide {
+    position: relative;
+    z-index: 50;
+    background: #25252a;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;    
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+    width: 100vw;
+  }
+  .panel-slide {
+    &.in {
+      transform: translate3d(0, -100%, 0);
+    }
+    &.out {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .panel-slide-overflow-container {
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;      
+    overflow: hidden;
+    max-height: 0;
+  }
+  .in {
+    .panel-slide-overflow-container {
+      max-height: 1000px;
+    }  
+    .gear {
+        animation-name: rotate; 
+        animation-duration: 2s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;        
+    }
+  }
+  .gear {
+    width: 43px;
+    height: 34px;
+    margin: 10px auto;
+    cursor: pointer;
+    position: fixed;
+    top: -57px;
+    left: 10px;
+    background: url(../../../assets/images/cog.png) center center no-repeat;
+    &:hover {
+        animation-name: rotate; 
+        animation-duration: 2s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+  }  
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  @media (min-width: 768px) {
+    .panel-slide-overflow-container {
+      height: auto;
+      overflow: visible;
+    }
+    .gear {
+      position: absolute;
+      &.in {
+      }
+    }  
+    .panelSlide {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;    
+      width: 12%;
+      min-width: 250px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+  }

@@ -1,0 +1,17 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+@each $color, $value in $grays {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+// Only when we use gradients thats when it should be used
+// @if $enable-gradients {
+//   @each $color, $value in $theme-colors {
+//     @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+//   }
+// }
+
+

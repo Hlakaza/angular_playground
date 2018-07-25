@@ -1,0 +1,308 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Theme styles
+//
+
+.green {
+  .btn-primary {
+    background-color: $sports;
+  }  
+}
+
+.light-green {
+  .btn-primary {
+    background-color: $light-green;
+  }
+}
+
+.pink {
+  .btn-primary {
+    background-color: $pink;
+  }
+}
+
+.gold {
+  .btn-primary {
+    background-color: $plus;
+  }
+} 
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+.btn-fd {
+  @include button-size($btn-padding-y-fd, $btn-padding-x-fd, $font-size-fd, $btn-line-height-fd, $btn-border-radius-lg);
+}
+.btn-lg-skew {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $border-radius-lg-skew);
+}
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+.btn-xs {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-xs, $btn-border-radius-sm);
+}
+
+.btn-fd-primary {
+ background-color: $tertiary;
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-skewed {
+  position: relative;
+  padding: 7px 20px;
+  text-align: center;
+  color: #fff;
+  margin-left: 20px;
+  cursor: pointer;
+  z-index: 2
+}
+
+.btn-skewed,.btn-skewed:before {
+  background-color: $sports;
+  border: 0;
+  @include transition($btn-transition);
+}
+
+.green {
+  .btn-skewed,.btn-skewed:before {
+    background-color: $sports;
+    border: 0
+  }  
+}
+
+.light-green {
+  .btn-skewed,.btn-skewed:before {
+    background-color: $light-green;
+    border: 0
+  }
+}
+
+.pink {
+  .btn-skewed,.btn-skewed:before {
+    background-color: $pink;
+    border: 0
+  }
+}
+
+.gold {
+  .btn-skewed,.btn-skewed:before {
+    background-color: $plus;
+    border: 0
+  }
+}
+
+//custom skew
+.btn-skewed-opposite,.btn-skewed-opposite:before {
+  background-color: $sports;
+  border: 0;
+  @include transition($btn-transition);
+}
+
+.green {
+  .btn-skewed-opposite,.btn-skewed-opposite:before {
+    background-color: $sports;
+    border: 0
+  }  
+}
+
+.light-green {
+  .btn-skewed-opposite,.btn-skewed-opposite:before {
+    background-color: $light-green;
+    border: 0
+  }
+}
+
+.pink {
+  .btn-skewed-opposite,.btn-skewed-opposite:before {
+    background-color: $pink;
+    border: 0
+  }
+}
+
+.gold {
+  .btn-skewed-opposite,.btn-skewed-opposite:before {
+    background-color: $plus;
+    border: 0
+  }
+}
+//end custom skew
+
+
+.btn-skewed:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15px;
+  display: block;
+  width: 40%;
+  transform: skew(14.5deg)
+}
+
+.btn-skewed-opposite {
+  position: relative;
+  padding: 7px 20px;
+  text-align: center;
+  color: #fff;
+  margin-left: 20px;
+  cursor: pointer;
+  z-index: 2
+}
+
+.btn-skewed-opposite,.btn-skewed-opposite:before {
+  background-color: $sports;
+  border: 0
+}
+
+.btn-skewed-opposite:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 105px;
+  display: block;
+  width: 40%;
+  -webkit-transform: skew(-14.5deg);
+  transform: skew(-14.5deg);
+}
+
+.btn-bettingmatch{
+  background: linear-gradient(to bottom,#585858 0%,#707070 100%);
+}

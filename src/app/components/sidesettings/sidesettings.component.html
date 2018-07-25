@@ -1,0 +1,23 @@
+<div [ngClass]="menuState" class="panel-slide" (click)="$event.stopPropagation()">
+    <div class="panel-slide-overflow-container pt-3 pb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+              <h4>Choose a theme colour</h4>
+              <ul class="list-inline colour-picker">
+                <li *ngFor="let colourButton of themeColours"><button (click)="setColour(colourButton.colour)" class="list-inline-item {{colourButton.colour}}"><span></span></button></li>
+              </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h4>Choose a brand</h4>
+            <select name="" id="" class="custom-select">
+              <option value="Betway Africa">Betway Africa</option>
+              <option value="Betway LATAM">Betway LATAM</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div (click)="toggleMenu(); $event.stopPropagation()" (document:click)="closeMenu()" class="gear" [ngClass]="menuState"></div>
+</div>

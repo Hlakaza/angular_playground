@@ -1,0 +1,20 @@
+  <div [ngClass]="menuState" class="panel-slide" (click)="$event.stopPropagation()">
+    <div class="panel-slide-overflow-container">
+      <ul class="list-group">
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="" [routerLinkActiveOptions]="{exact:
+          true}">Home</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="grid">Grid</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="buttons">Buttons</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="typography">Typography</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="forms">Forms</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="utilities">Utilities</a></li>
+        <li><a href="#" class="list-group-item list-group-item-primary list-group-item-action" routerLinkActive="active" routerLink="images">Images</a></li>
+      </ul>
+    </div>
+  
+    <button (click)="toggleMenu(); $event.stopPropagation()" (document:click)="closeMenu()" class="hamburger" [ngClass]="menuState">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+</div>

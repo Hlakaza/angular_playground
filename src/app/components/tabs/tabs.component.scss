@@ -1,0 +1,80 @@
+// .nav,.none {
+//     list-style: none
+// }
+
+// .nav {
+//     padding: 0;
+//     margin: 0
+// }
+// .tab-content {
+//     overflow: hidden;
+//     display: block;
+//     background: #fff;
+//     border-top: 0;
+//     padding: 0 1em;
+// }
+// .nav-tabs {
+//     display: flex;
+//     flex-wrap: wrap;
+//     padding-left: 1.1em;
+// }
+// .nav-tabs .nav-link {
+//     display: block;
+//     padding: 10px 15px 10px 0;
+//     margin-right: 25px;
+//     text-decoration: none;
+//     text-align: left;
+// }
+// .nav-tabs-vertical {
+//     @media (min-width: 64em){
+//         float: left;
+//         width: 152px;
+//     }
+//     border-right: 0;
+// }           
+// .nav-tabs-vertical .nav-item {
+//     z-index: 1;
+//     display: block;
+//     margin: 2px 0;
+//     background-color: rgb(211, 211, 211);
+// }
+// .nav-tabs-vertical .nav-item:first-child{
+//     margin-top: 0
+// }
+// .nav-tabs-vertical .nav-item:last-child{
+//     margin-bottom: 0
+// }
+// .nav-tabs-vertical .nav-link {
+//     display: block;
+//     width: 150px;
+//     padding: 1.8em  0.5em;
+//     text-decoration: none;
+//     color: rgb(255, 0, 0);
+//     font-weight: bold;
+//     text-transform: bold;
+//     text-align: center;
+//     cursor: pointer;
+// }
+// .nav-tabs-vertical .nav-link.active {
+//     background: #fff;
+// }
+// @media (max-width: 64em){
+//     .nav-tabs-vertical .nav-link{
+//         width: 100%;
+//         padding: 1.5em;
+//         text-align: left;
+//     }
+// }
+
+//additional test styling
+
+.games-tab a {
+
+    @media (min-width: 992px) {
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }

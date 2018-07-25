@@ -1,0 +1,65 @@
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+    > .tab-pane {
+      display: none;
+    }
+    > .active {
+      display: block;
+    }
+  }
+  
+  // custom
+  .bslip-tabs {
+    list-style:  none;
+    // color: black;
+  }
+  .bslip-tab {
+    float: left;
+    background-color: $gray-600;
+    // color: black;
+    justify-content: space-around;
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid $gray-300;
+  }
+  
+  .bslip-tabs .active{
+    background-color: $gray-300;
+    color: $primary;
+    width: 100%
+    // font-weight: bold;
+  }
+
+  .bslip-tab a{
+    color: white;
+  }
+
+  //Games Tabs
+
+  .games-tabs{
+    list-style:  none;
+  }
+
+  .games-tab {
+    float: left;
+    background-color: $gray-300;
+    // color: black;
+    justify-content: space-around;
+    width: 10%;
+    text-align: center;
+    border-right: 1px solid $gray-300;
+  }
+
+  .games-tabs .active{
+    background-color: $primary;
+    color: $white;
+    width: 100%
+    // font-weight: bold;
+  }
+
+  .games-tab a{
+    color: white;
+  }

@@ -1,0 +1,454 @@
+<div class="row">
+  <div class="col">
+    <h1>Modals</h1>
+    <div class="bd-example">
+      <button type="button" class="btn btn-primary" (click)="modal.open('demo')">
+        Launch demo modal
+      </button>
+    </div>
+    <figure class="highlight">
+      <pre>
+  <code class="language-html" data-lang="html">
+  <span class="c">&lt;!-- Button trigger modal --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('demo')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+    Launch demo modal
+  <span class="nt">&lt;/button&gt;</span>
+  
+  <span class="c">&lt;!-- Modal --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('demo')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+          ...
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">(click)=</span><span class="s">"modal.close('demo')"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  </code>
+  </pre>
+    </figure>
+
+    <h3>Vertically centered</h3>
+    <p>Add
+      <code class="highlighter-rouge">.modal-dialog-centered</code> to
+      <code class="highlighter-rouge">.modal-dialog</code> to vertically center the modal.</p>
+    <div class="bd-example">
+      <button type="button" class="btn btn-primary" (click)="modal.open('centeredModal')" data-toggle="modal">
+        Launch centered modal
+      </button>
+    </div>
+    <figure class="highlight">
+      <pre>
+  <code class="language-html" data-lang="html">
+  <span class="c">&lt;!-- Button trigger modal --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('centeredModal')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+      Launch centered modal
+  <span class="nt">&lt;/button&gt;</span>
+  
+  <span class="c">&lt;!-- Modal --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('large')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+          ...
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">(click)=</span><span class="s">"modal.close('large')"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  </code>
+  </pre>
+    </figure>
+    <h3>Modal optional sizes</h3>
+    <p>Add
+      <code class="highlighter-rouge">.modal-lg</code> or
+      <code class="highlighter-rouge">.modal-sm</code> to
+      <code class="highlighter-rouge">.modal-dialog</code> to get the size you neeed.</p>
+    <p>Modals have two optional sizes, available via modifier classes to be placed on a
+      <code class="highlighter-rouge">.modal-dialog</code>. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.</p>
+    <div class="bd-example">
+      <button type="button" class="btn btn-primary" data-toggle="modal" (click)="modal.open('modal-lg')">Large modal</button>
+      <button type="button" class="btn btn-secondary " data-toggle="modal" (click)="modal.open('demo')">Default modal</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" (click)="modal.open('modal-sm')">Small modal</button>
+    </div>
+    <figure class="highlight">
+      <pre>
+  <code class="language-html" data-lang="html">
+    <span class="c">&lt;!-- Large modal --&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('modal-lg')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-lg"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('modal-lg')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            ...
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  
+  
+  <span class="c">&lt;!-- Default modal --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('modal-default')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('modal-default')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  
+  
+  <span class="c">&lt;!-- Small modal --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('modal-sm')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('modal-sm')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  </code>
+  </pre>
+    </figure>
+
+    <h3>Modal with no header and footer</h3>
+    <div class="bd-example">
+      <button type="button" class="btn btn-primary" (click)="modal.open('flat')">
+        Launch flat modal
+      </button>
+      <button type="button" class="btn btn-primary" (click)="modal.open('scroll')">
+        Launch flat modal
+      </button>
+    </div>
+    <figure class="highlight">
+      <pre>
+  <code class="language-html" data-lang="html">
+  <span class="c">&lt;!-- Button trigger modal --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('flat')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+    Launch flat modal
+  <span class="nt">&lt;/button&gt;</span>
+    
+  <span class="c">&lt;!-- Modal --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>   
+           ...
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('flat')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  </code>
+  </pre>
+    </figure>
+    <h3>Modal success / error</h3>
+    <p>Add
+      <code class="highlighter-rouge">.modal-sm modal-dialog-centered</code> to
+      <code class="highlighter-rouge">.modal-dialog</code> to get a small and center aligned modal</p>
+    <p>Add
+      <code class="highlighter-rouge">.justify-content-center</code> to
+      <code class="highlighter-rouge">.modal-footer</code> to center align the button.</p>
+    <div class="bd-example">
+      <button type="button" class="btn btn-primary" data-toggle="modal" (click)="modal.open('success')">Success</button>
+      <button type="button" class="btn btn-danger" data-toggle="modal" (click)="modal.open('error')">Error</button>
+    </div>
+    <figure class="highlight">
+      <pre>
+  <code class="language-html" data-lang="html">
+    <span class="c">&lt;!-- Success --&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('success')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm modal-dialog-centered"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('success')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            ...
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer justify-content-center"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">(click)=</span><span class="s">"modal.close('success')"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  
+  
+  <span class="c">&lt;!-- Error --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">(click)=</span><span class="s">"modal.open('error')"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span><span class="na">role=</span><span class="s">"dialog"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm modal-dialog-centered"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">(click)=</span><span class="s">"modal.close('error')"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer justify-content-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">(click)=</span><span class="s">"modal.close('error')"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  </code>
+  </pre>
+    </figure>
+  </div>
+</div>
+
+
+
+<ng-template [ngIf]="modals['demo']">
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal title</h4>
+          <button type="button" class="close" data-dismiss="modal" (click)="modalClose('demo')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Modal body content goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modalClose('demo')" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['centeredModal']">
+  <!-- Modal vertical aligned-->
+  <div class="modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-sports">
+          <h4 class="modal-title text-white">Modal title</h4>
+          <button type="button" class="close text-white" data-dismiss="modal" (click)="modalClose('centeredModal')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, ad per paulo appellantur, ad ludus iisque maiorum nec, ut sit fugit facer minim. Mea id tale
+          ridens dignissim, mutat partem at vix, mel quod virtute accumsan eu. Id antiopam torquatos ullamcorper est. Vel
+          quot doctus repudiandae cu. Id dicam efficiantur eum, paulo nonumy legendos ex quo.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modalClose('centeredModal')" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['modal-lg']">
+  <!-- Modal large-->
+  <div class="modal">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <h4 class="modal-title text-white">Modal large</h4>
+          <button type="button" class="close text-white" data-dismiss="modal" (click)="modalClose('modal-lg')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, ad per paulo appellantur, ad ludus iisque maiorum nec, ut sit fugit facer minim. Mea id tale
+          ridens dignissim, mutat partem at vix, mel quod virtute accumsan eu. Id antiopam torquatos ullamcorper est. Vel
+          quot doctus repudiandae cu. Id dicam efficiantur eum, paulo nonumy legendos ex quo.
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['modal-sm']">
+  <!-- Modal small-->
+  <div class="modal">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-virtuals">
+          <h4 class="modal-title text-white">Modal small</h4>
+          <button type="button" class="close text-white" data-dismiss="modal" (click)="modalClose('modal-sm')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, ad per paulo appellantur, ad ludus iisque maiorum nec, ut sit fugit facer minim. Mea id tale
+          ridens dignissim, mutat partem at vix, mel quod virtute accumsan eu. Id antiopam torquatos ullamcorper est. Vel
+          quot doctus repudiandae cu. Id dicam efficiantur eum, paulo nonumy legendos ex quo.
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['success']">
+  <!-- Modal success-->
+  <div class="modal">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-sports">
+          <h4 class="modal-title text-white">Success</h4>
+          <button type="button" class="close text-white" data-dismiss="modal" (click)="modalClose('success')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, ad per paulo appellantur,
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary" (click)="modalClose('success')" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['error']">
+  <!-- Modal error-->
+  <div class="modal">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h4 class="modal-title text-white">Error</h4>
+          <button type="button" class="close text-white" data-dismiss="modal" (click)="modalClose('error')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, ad per paulo appellantur,
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-danger" (click)="modalClose('error')" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['flat']">
+  <!-- Modal without header-->
+  <div class="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" (click)="modalClose('flat')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          Lorem ipsum dolor sit amet, ad per paulo appellantur, ad ludus iisque maiorum nec, ut sit fugit facer minim. Mea id tale
+          ridens dignissim, mutat partem at vix, mel quod virtute accumsan eu. Id antiopam torquatos ullamcorper est. Vel
+          quot doctus repudiandae cu. Id dicam efficiantur eum, paulo nonumy legendos ex quo.
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="modals['scroll']">
+  <!-- Modal scrolling content-->
+  <div class="modal">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" (click)="modalClose('scroll')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+            faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

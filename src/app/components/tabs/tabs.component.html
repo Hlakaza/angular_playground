@@ -1,0 +1,9 @@
+<ul [ngClass]="ulClass">
+  <li *ngFor="let tab of tabs; let i = index" (click)="selectTab(i)" [ngClass]="liClass">
+    <a routerLink="./" class="nav-link" [class.active]="tab.active" [class.disabled]="tab.disabled">
+      <span *ngIf="tab.svgType" appSvg [svgId]="tab.svgType" svgClass="svg-md clearfix " x="0" y="20"></span>
+      {{tab.title}}
+    </a>
+  </li>
+</ul>
+<ng-content></ng-content>

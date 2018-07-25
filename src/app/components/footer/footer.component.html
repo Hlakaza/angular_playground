@@ -1,0 +1,27 @@
+<div id="footer-upper" class="footer-up pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 row">
+          <ul *ngFor="let footerNavListUL of footerNavListULTemp; let i = index" class="col-12 col-sm-6 col-md-4 list-unstyled">
+              <li class="mb-1" *ngFor="let footerNavItem of footerNavArray.slice(navListRowLength*i, navListRowLength*i + navListRowLength);">
+                  <a class="text-white" routerLink="{{ footerNavItem.P }}">{{ footerNavItem.MC }}</a>
+              </li>
+          </ul>
+      </div>
+      <div class="col-12 col-md-6">
+        Footer logos
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer-lower" class="footer-lw pt-4 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center text-white">
+          Raging River Trading (Pty) Ltd (2011/134505/07) trading as Betway South Africa, is licensed and regulated by the Western Cape Gambling and Racing Board. Bookmaker License Number: 10181496-004 . No persons under the age of 18 years are permitted to gamble. Winners know when to stop. National Responsible Gambling Programme: 0800 006 008. Warning: Gambling involves risk. By gambling on this website, you run the risk that you may lose.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
