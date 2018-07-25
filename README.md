@@ -1,29 +1,16 @@
-
-# BetwayStyleGuide
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Table of contents
 
-- [Quick start](#quick-start)
 - [Status](#status)
 - [What's included](#whats-included)
 - [Documentation](#documentation)
 
-## Quick start
-
-Several quick start options are available:
-
-- Clone the repo: `git clone http://otjhbtfs01:8080/tfs/OsirisTrading/Spectre/_git/betwayStyleGuide`
-- Install with [npm](https://www.npmjs.com/): `npm install`
 
 Read the [Getting started page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
-
-- [Playground Demo](http://osiris.playground.com.labenv/)
 - [Test on latest bootstrap version](https://github.com/twbs/bootstrap#status) 
-- Upload folder (M:\Offers\offers.test.com\styleguides) 
 
 ## What's included
 
